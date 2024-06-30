@@ -1,0 +1,26 @@
+sqplus / as sysdba
+ Create user biblio identified by biblio;
+Grant Connect to biblio;
+ Grant dba to biblio;
+connect biblio/biblio;
+ Create table livre (ISBN number(20), titre varchar2(20), auteur varchar2(20), annee_de_publication DATE, genre varc
+har2(20), editeur varchar2(20), langue varchar2(20), constraint pk_biblio primary key(ISBN));
+Create table Membres (ID_membre number(20) , nom varchar2(20), prenom varchar2(20), adresse varchar2(20), email varchar2(20), telephone number(20), date_inscription DATE, constraint pk_biblio_membre primary key(ID_membre));
+create table emprunts (ID_emprunts number(20), id_membre number(20), isbn_libre number(20), date_emprunt DATE, date_retour DATE, status varchar2(10), constraint pk_emprunts primary key (ID_emprunts));
+ create table auteurs (ID_auteur number(20), nom varchar2(20), prenom varchar2(20), nationalite varchar2(20), constraint pk_auteurs primary key (ID_auteur));
+create table editeur (ID_editeur number(20), nom varchar2(20), adresse varchar2(20), pays varchar2(20), constraint
+pk_editeur primary key (ID_editeur));
+create table member (ID_user number(20), nom varchar2(20), username varchar2(20), email varchar2(20), status CHAR(1) CHECK (status IN ('Y', 'N')), cons
+traint pk_user primary key (ID_user));
+ALTER TABLE member RENAME COLUMN nom TO password;
+ALTER TABLE MEMBER MODIFY (EMAIL VARCHAR2(50));
+ALTER TABLE LIVRE MODIFY (annee_de_publication VARCHAR2(50));
+ALTER TABLE LIVRE MODIFY (auteur NUMBER(2));
+ALTER TABLE LIVRE MODIFY (editeur NUMBER(2));
+ALTER TABLE LIVRE ADD (image varchar2(20));
+ ALTER TABLE livre ADD CONSTRAINT fk_id_auteur FOREIGN KEY (auteur) REFERENCES auteurs (id_auteur);
+ALTER TABLE livre ADD CONSTRAINT fk_id_editeur FOREIGN KEY (editeur) REFERENCES editeur (id_editeur);
+ALTER TABLE emprunts ADD CONSTRAINT fk_id_membre FOREIGN KEY (id_membre) REFERENCES membres (id_membre);
+ALTER TABLE emprunts ADD CONSTRAINT fk_id_livre FOREIGN KEY (isbn_libre) REFERENCES livre (isbn);
+ ALTER TABLE LIVRE ADD (quantite number(20));
+ALTER TABLE member MODIFY (password varchar2(60));

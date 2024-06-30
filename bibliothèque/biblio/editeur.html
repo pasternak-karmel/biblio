@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editeur</title>
+    <link rel="stylesheet" href="auteur.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestion des editeurs</h1>
+      <div class="form-container">
+        <h2>Ajouter un editeur</h2>
+        <form id="auteurForm">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" required />
+
+          <label for="adresse">Adresse :</label>
+          <input type="text" id="adresse" required />
+
+          <label for="pays">Pays :</label>
+          <input type="text" id="pays" required />
+
+          <button type="submit">Ajouter</button>
+        </form>
+      </div>
+      <div class="auteur-container">
+        <h2>Liste des Editeurs</h2>
+        <ul id="AuteurList"></ul>
+      </div>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="editeur.js"></script>
+  </body>
+</html>

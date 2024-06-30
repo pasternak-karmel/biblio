@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliothèque</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">Bibliothèque</div>
+      <ul class="nav-links">
+        <li><a href="main.html">Accueil</a></li>
+        <li><a href="emprunt.html">Mes Emprunts</a></li>
+        <li><a href="#">Mon Compte</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <aside class="filters">
+        <h2>Filtrer les Livres</h2>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Rechercher un livre..."
+        />
+        <label for="categories">Catégories</label>
+        <select id="categories">
+          <option value="all">Toutes</option>
+          <option value="fiction">Fiction</option>
+          <option value="non-fiction">Non-Fiction</option>
+          <option value="science">Science</option>
+          <option value="history">Histoire</option>
+        </select>
+        <div class="checkbox-group">
+          <h3>Genres</h3>
+          <label
+            ><input type="checkbox" name="genre" value="drama" /> Drame</label
+          >
+          <label
+            ><input type="checkbox" name="genre" value="thriller" />
+            Thriller</label
+          >
+          <label
+            ><input type="checkbox" name="genre" value="romance" />
+            Romance</label
+          >
+          <label
+            ><input type="checkbox" name="genre" value="fantasy" />
+            Fantasy</label
+          >
+        </div>
+      </aside>
+      <main class="book-display" id="book-display"></main>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

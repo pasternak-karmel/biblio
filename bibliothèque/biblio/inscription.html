@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion et Inscription</title>
+    <link rel="stylesheet" href="inscription.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container sign-up-container">
+        <form id="signUpForm">
+          <h1>Créer un Compte</h1>
+          <input
+            type="text"
+            id="signUpUsername"
+            placeholder="Nom d'utilisateur"
+            required
+          />
+          <input type="email" id="signUpEmail" placeholder="Email" required />
+          <input
+            type="password"
+            id="signUpPassword"
+            placeholder="Mot de passe"
+            required
+          />
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form id="signInForm">
+          <h1>Se Connecter</h1>
+          <input
+            type="text"
+            id="signInUsername"
+            placeholder="Nom d'utilisateur"
+            required
+          />
+          <input
+            type="password"
+            id="signInPassword"
+            placeholder="Mot de passe"
+            required
+          />
+          <button type="submit">Connexion</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Déjà un compte?</h1>
+            <p>Connectez-vous pour accéder à votre compte</p>
+            <button class="ghost" id="signIn">Connexion</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Nouveau ici?</h1>
+            <p>Inscrivez-vous pour créer un compte</p>
+            <button class="ghost" id="signUp">S'inscrire</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="inscription.js"></script>
+  </body>
+</html>

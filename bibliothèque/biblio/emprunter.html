@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emprunter un Livre</title>
+  <link rel="stylesheet" href="specific.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Emprunter un Livre</h1>
+    <form id="borrow-form">
+      <input type="hidden" id="isbn" name="isbn">
+      <div class="form-group">
+        <label for="return-date">Date de retour:</label>
+        <input type="date" id="return-date" name="return-date" required>
+      </div>
+      <button type="submit">Valider</button>
+    </form>
+  </div>
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="emprunter.js"></script>
+</body>
+</html>

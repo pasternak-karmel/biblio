@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion de Bibliothèque</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestion de Bibliothèque</h1>
+      <div class="form-container">
+        <h2>Ajouter un Livre</h2>
+        <form id="bookForm">
+          <label for="title">Titre :</label>
+          <input type="text" id="title" required />
+
+          <label for="author">Auteur :</label>
+          <!-- <input type="text" id="auteur" required /> -->
+          <select id="auteur" name="auteur" required>
+            <option value="">Sélectionnez un auteur</option>
+          </select>
+
+          <label for="annee">Année de publication :</label>
+          <input type="date" id="annee" required />
+
+          <label for="genre">Genre:</label>
+          <!-- <input type="text" id="genre" required /> -->
+          <!-- <input type="text" id="editeur" required /> -->
+          <select id="genre" name="genre" required>
+            <option value="">Sélectionnez un Genre</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Aventure">Aventure</option>
+            <option value="Action">Action</option>
+            <option value="Perverse">Perverse</option>
+          </select>
+
+          <label for="qte">Quantité disponible :</label>
+          <input type="number" id="qte" required />
+
+          <label for="editeur">Editeur:</label>
+          <select id="editeur" name="editeur" required>
+            <option value="">Sélectionnez un éditeur</option>
+          </select>
+
+          <label for="langue">Langue:</label>
+          <select id="langue" required>
+            <option value="French">Français</option>
+            <option value="English">Anglais</option>
+            <option value="etc">Etc</option>
+          </select>
+          <!-- <label for="disponible">Quantité disponible:</label>
+          <input type="number" id="disponible" required /> -->
+
+          <button type="submit">Ajouter</button>
+        </form>
+      </div>
+      <!-- <div class="books-container">
+        <h2>Liste des Livres</h2>
+        <ul id="bookList"></ul>
+      </div> -->
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
